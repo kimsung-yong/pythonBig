@@ -1,96 +1,136 @@
-walet = 99999
-print('유저가 가지고 있는돈:')
-print(walet)
+#연산자
+#   기본적인 +,-,*,%
+#   a ** b a의 b승 값을 돌려준다
+#   기타
 
-a = "life is too short, you need python"
-print(a[0:4])
+#python의 자료형
+#   문자열
+#   숫자
+#   리스트
+#   딕셔너리
+#문자열
+#   기본사항
+#   문자열은 "" 또는 ''로 감싼다
+#   특이사항
+#   \' 또는 \"하면 감싸는 '',""가 아닌 '',"" 문자 자체를 나타 낸다
+#   여러줄인 문자열 작성 방법
+#   1) \n 계행코드
+#   2) """ 3개를 사용해서 문장을 감싸면 된다
 
-b = "20010331Rainy"
-# date = b[:8]
-# weather = b[8:]
-# print(date)
-# print(weather)
-#
+#인덱싱과 슬라이싱
+#   인덱싱이란 배열이나 리스트에 값을 추출하는것을 말한다.
+#   ex) a = [1,2,3,4] 라고 설정했을때
+#       a[0] 은 1의 값을 나타낸다
+#       이것을 변수에 저장할려면 b = a[0]으로 나타낸수 있다
+#   슬라이싱이란
+#   배열 또는 리스트를 기준점을 잡아 나눠서 추출하는 방법
+#   ex) a = [1,2,3,4]
+#       a[0:2] 0번째 인덱스 부터 2개를 꺼낸다는 뜻이다. 수식으로 나타내면 0 <= a < 2 그러므로 값 '3'은 꺼내지지 않는다
+#       a[:] a객체의 값을 전부 꺼낸다
+#       a[:3] 처음부터 3번째 인덱스 까지 꺼낸다
 
-c = 12
-d = 1.2
+#문자 포메팅
+#   문자 포메팅이란 문자열 내에 어떤 값을 삽입하는 방법을 말한다
+#   ex) print("i eat %d apples" % 3)
+#   %s 문자열
+#   %d 정수형
+#   %c 문자 한개
+#   %f 부동소수
+#   %% % 자체
+#   (ex print("error is %d%%" %55) )
+#   실행결과
+#   error is 55%
+#   특이사항 %s를 사용하면 어떤 타입이든 자동으로 형변환이 된다. 변수에 숫자 3을 대입하면 %d로 해석된다
+#   메소드 종류 upper , count , find , index , join , lower , rstrip , strip , replace , split , swapcase
+#   a.upper() 문자열 a를 모두 대문자로 바꾸어 준다.
+#   a.count(x) 문자열 a중 x와 일치하는 것의 갯수를 반환한다.
+#   a.find(x) 문자열 a중 x가 처음으로 나온 위치를 반환한다. 없으면 -1를 반환한다.
+#   a.index(x) 문자열 a중 문자 x가 처음으로 나온 위치를 반환한다. 없으면 애러를 발생시킨다.
+#   a.join(s)  s라는 문자열의 각각의 요소 문자 사이에 문자열 a를 삽입한다
+#   a.lower() 문자열 a를 모두 소문자로 바꾸어 준다.
+#   a.lstrip() 문자열 a의 왼쪽 공백을 모두 지운다.
+#   a.rstrip() 문자열 a의 오른쪽 공백을 모두 지운다.
+#   a.strip() 문자열 a의 양쪽 공백을 모두 지운다.
+#   a.replace() 문자열 a의 s라는 문자열을 r이라는 문자열로 치환한다.
+#   a.split([s]) 문자열 a를 공백으로 나누어 리스트값을 돌려준다.
+#   a.swapcase() 문자열 a의 대문자는 소문자로, 손문자는 대문자로 각각 바꾸어 준다.
 
-print(c, d)
-print(type(c))
-print(type(d))
+#리스트 함수
+#   a.append() 리스트에 요수 추가 - 리스트의 맨 마지막에 추가시킴
+#   a.sort() 정렬
+#   a.reverse() 인덱스 역순으로 한다.
+#   a.index(x) x번째 값을 반환한다. 값이 있을 경우
+#   a.insert(0,4) 0번쨰 자리에 4의 값을 삽입하라는 뜻이다
+#   a.remove(x) x랑 같은 값이 리스트에 존재할경우 삭제한다. 주의 x는 인덱스 번호가 아니라 문자 그자체 이다.
+#   a.pop() 리스트의 맨 마지막 요소를 반환후 리스트에서 제거한다.
+#   a.count(x) 리스트 값 중에서 x가 몇개 있는지 조사후 반환
+#   a.extend([x]) a의 리스트에 x리스트를 마지막에 추가시킨다.
 
-a = 20
-b = 3
+#딕셔너리
+#   딕셔너리란 자바에 map과 같음
+#   a,keys() 딕셔너리 a의 key들을 모아놓은 리스트를 돌려준다.
+#   a.values() 딕셔너리 a의 value들을 모아놓은 리스트를 돌려준다.
+#   a.item() 딕셔너리 a의 key,value들을 모아놓은 리스트를 돌려준다.
+#   a.clear() 딕셔너리 a의 key,value 초기화 시킨다.
+#   a.get(x) 딕셔너리 a의 key가 x인 것의 value를 돌려준다.
+#딕셔너리 예제
+dic = {'name':'pey','phone':'0119993323','birth':1118}
+#딕셔너리 접근법
+print(type(dic['birth']))
+print(dic['birth'])
+#딕셔너리 쌍 추가
+dic['address'] = '대전'
+#딕셔너리 요소 삭제
+del dic['name']
+#딕셔너리 전체삭제
+dic.clear()
+#딕셔너리 values 리스트로 반환
+dic.values()
+#딕셔너리 key,value 값 쌍 얻기
+dic.items()
+#딕셔너리 key값 확인
+print(dic.keys())
 
-print(a / b)
-print(a // b)
-print(a * b)
-print(a - b)
-print(a % b)
+#변수 리스트 복사
+#ex) a=b(주소를 복사한다 그러므로 같은 주소를 가르키게 되므로 b를 변경하면 a도 변경된다) , a=b[:] , from copy import copy(카피 메소드 선언 후) a = copy(b)
+# a와b의 비교 a와 b의 주소 비교 a is b 
 
-print("소소한\
- 코딩\
-  교실")
+#if문
+#if 조건문 :
+    #실행문
+    #실행문
+#else
+    #실행문
+    #실행문
 
-for i in range(10):
-    print(a * b)
-else:
-    print("바보")
+#if ~ elif문
+#fi 조건문 :
+    #실행문
+    #실행문
+#   elif 조건문 :
+        #실행문
+        #실행문
+    #else
+        #실행문
+        #실행문
+# continue 처음으로 돌아간다
+# pass 코드 해당 조건일때 아무것도 안하고 통과한다.
 
-a = '행복한 코딩 교실'
-print(a.upper())
-print(len(a))
+#while문
+#   while 조건문 :
+#         수행할 문장
+#         수행할 문장
+#         수행할 문장
 
-print("현재 온도는 18도 입니다")
-print("i eat %s apply" % 3)
-print("i eat %s%% apply" % 4)
+#for문 
+#   for 변수 in 리스트(터플, 문자열):
+#   수행할 문장
+#   수행할 문장
+#   수행할 문장
 
-# a = int(input())
-# b = int(input())
-# print(type(a))
-# print(type(b))
-# c = a+b
+#   ex) 구구단
 
-print(str(c) + '두수의 합입니다')
-
-num = [1,2,3,4,5,['list','asd']]
-print(num[5][0])
-a = [1,2,3,4,5,['a','b','c'],6,7]
-b = [1,2,4]
-a [1:] = []
-
-
-num_pen = 4000
-num_penal = 3000
-
-a = [1,2,3,4]
-
-a[1] = (str(a[1]) + 'hi')
-
-print(a)
-
-a = [5,4,1,2,3]
-a.append(4)
-a.insert(3,100)
-print(a)
-a.sort()
-print(a)
-s = a.pop()
-print(s)
-print(a)
-a += [4,5]
-print(a)
-# a = int(input('연필의 구매 개수를 입력해주세요'))
-# b = int(input('볼팬의 구매 개수를 입력해주세요'))
-# c = ((num_penal * a) + (num_pen * b)) * 0.7
-# d = str(c)
-# e = d.index('.')
-# print(type(type(d)))
-# print('d의 클래스 타입은 '+str(type(d)))
-# print('구매하신 총 금액은 %d 원 입니다' % c)
-
-t1 = 1,2,3
-t1 += 4,5
-
-print(t1)
-
+for i in range(2,10):
+    for j in range(1,10):
+        print(i*j,end=' ')
+    print("\n")
