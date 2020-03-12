@@ -190,4 +190,33 @@
 # 단순히 절대경로를 적어주게 되면 unicode 오류가 뜬다.
 # 이것을 해결할려면 open("C:\Users\IT\PycharmProjects\새파일.txt", 'w') 첫번쨰 따운표 앞에 r을 적어 주던가
 # 역슬래쉬를 두개를 적어주면 된다.
+# --------------------------------------------------------------------------------------------------------------------------------------
 # open(r"C:\Users\IT\PycharmProjects\새파일.txt", 'w') or open("C:\\Users\\IT\\PycharmProjects\\새파일.txt", 'w')
+# ex 텍스트 파일에 글 쓰기
+# f = open("새파일.txt",'w')
+# a = int(input("몇번째 줄까지 입력하시겠습니까?"))
+# for i in range(1,a+1):
+#     data = "%s 줄 입니다 \n" % i
+#     f.write(data)
+# f.close()
+# --------------------------------------------------------------------------------------------------------------------------------------
+# 파일을 읽는 방법
+# 1. readline() 1줄만 읽는다 : line = f.readline()
+# f = open("새파일.txt",'r')
+# while 1:
+#     line = f.readline()
+#     if not line:break
+#     print(line)
+# f.close()
+#
+# 2. readlines() 파일의 전체를 읽는다 : line = f.readlines()
+# f = open("새파일.txt",'r')
+# line = f.readlines()
+# print(line)
+# f.close()
+#
+# 3. read() 파일을 전부 읽은 문자열을 돌려준다. : data = f.read()
+# f = open("새파일.txt",'r')
+# data = f.read()
+# print(data)
+# f.close
