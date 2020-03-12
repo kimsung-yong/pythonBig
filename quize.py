@@ -90,18 +90,39 @@
 # print("총 합은 "+ str(aa) + '입니다')
 
 # # 문제 10
-score =[]
-i = 0
-print("점수를 입력하세요")
-while 1:
-    point = int(input())
-    score.append(point)
+# score =[]
+# i = 0
+# print("점수를 입력하세요")
+# while 1:
+#     point = int(input())
+#     score.append(point)
+#
+#     if point ==0:
+#         break
+#     elif score[i] > 60:
+#         print(str(i+1) + '번 학생 통과')
+#         i += 1
+#     elif score[i] <=60:
+#         print(str(i+1) + '번 학생 불합격')
+#         i += 1
 
-    if point ==0:
-        break
-    elif score[i] > 60:
-        print(str(i+1) + '번 학생 통과')
-        i += 1
-    elif score[i] <=60:
-        print(str(i+1) + '번 학생 불합격')
-        i += 1
+# # 문제 11
+# while 1:
+#     num = int(input('홀수 짝수 구별 하실 수를 입력하여 주세요.(종료:0)'))
+#     if num % 2 == 1:
+#         print('%s는 홀수 입니다' % num)
+#     elif num == 0:
+#         print('EXIT')
+#         break
+#     else:print('%s는 짝수 입니다.' % num)
+
+# # 문제 12
+# print('높이를 입력하세요')
+# high = float(input())
+# i=0
+# while 1:
+#    high /=2
+#    if high<0.00001:
+#        break
+#    i += 1
+# print('공이 튀긴횟수는 %s입니다'% i)
