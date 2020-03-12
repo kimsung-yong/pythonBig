@@ -1,16 +1,15 @@
 #문제1
 gender = input("성별을 입력하세요 ex 남자 여자")
-age = input("나이를 입력하세요")
+age = int(input("나이를 입력하세요"))
 
 human = {"gender": gender, "age": age}
 list1 = [human]
 
-print(list1.index(0))
 for i in list1:
-    if human["gender"] == '남자':
+    if list1[0].get("gender") == '남자':
         print("적립금 두배.")
         # break
-    elif int(human["age"]) >= 20:
+    elif list1[0].get("age") >= 20:
         print("적립금 두배.")
         # break
     else:print("적립금 1.5배")
