@@ -1,6 +1,9 @@
-a = []
-for i in range(1,10):
+class prev:
 
-    a.append(i)
-a.reverse()
-print(a)
+    def isd(self,b):
+        a = []
+        for i in range(1,b+1):
+
+            a.append(i)
+        a.reverse()
+        print(a)

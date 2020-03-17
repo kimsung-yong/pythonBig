@@ -220,3 +220,41 @@
 # data = f.read()
 # print(data)
 # f.close
+
+# #클래스란 메소드와 전역변수의 집합
+# #클래스 사용 방법 및 예제
+# class bank:
+#     result = 0
+#
+#     def deposit(self, a):
+#         self.result += a
+#         return self.result
+#
+#     def whithdraw(self,a):
+#         self.result -= a
+#         return self.result
+#
+#     def checkbalance(self):
+#         return self.result
+#
+#     def checkbalance1():
+#         return print("출력")
+#
+# asd = bank()
+# print(asd.deposit(2))
+# print(asd.whithdraw(3))
+# print("잔액은 %d입니다" %asd.checkbalance())
+# gg = bank
+# print(bank.deposit(asd,4))
+# print(id(bank))
+# print(type(asd))
+# print(id(asd))
+#class의 self란
+#클래스의 self는 항상 내부클래스의 인자값으로 들어와야 한다.
+#self는 메소드를 담은 객체로 접근할수있고 self를 사용하지않으면 클래스명으로 접근해야한다.
+
+#외부 클래스 호출방법 import 파일이름
+import range
+isd = range.prev()
+isd.isd(4)
+
