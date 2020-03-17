@@ -268,7 +268,7 @@ class calc:
         return self.result
     def mul(self,x,y):
         r1 = range.prev
-        self.result = r1.mul(r1,x,y)
+        self.result = r1.mul(self,x,y)
         return self.result
 
 
