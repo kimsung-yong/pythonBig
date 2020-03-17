@@ -7,7 +7,5 @@ class prev:
     def add(self,x,y):
         self.result = x + y
         return self.result
-
     def mul(self,x,y):
         self.result = x * y
-        return self.result

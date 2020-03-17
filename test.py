@@ -249,12 +249,28 @@
 # print(id(bank))
 # print(type(asd))
 # print(id(asd))
-#class의 self란
-#클래스의 self는 항상 내부클래스의 인자값으로 들어와야 한다.
-#self는 메소드를 담은 객체로 접근할수있고 self를 사용하지않으면 클래스명으로 접근해야한다.
+# class의 self란
+# 클래스의 self는 항상 내부클래스의 인자값으로 들어와야 한다.
+# self는 메소드를 담은 객체로 접근할수있고 self를 사용하지않으면 클래스명으로 접근해야한다.
 
-#외부 클래스 호출방법 import 파일이름
+# 외부 클래스 호출방법 import 파일이름
 import range
-isd = range.prev()
-isd.isd(4)
 
+
+class calc:
+
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def add(self,x,y):
+        self.result = x + y
+        return self.result
+    def mul(self,x,y):
+        r1 = range.prev
+        self.result = r1.mul(r1,x,y)
+        return self.result
+
+
+c1 = calc(3, 4)
+print(c1.mul(c1.x,c1.y))
