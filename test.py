@@ -193,12 +193,13 @@
 # --------------------------------------------------------------------------------------------------------------------------------------
 # open(r"C:\Users\IT\PycharmProjects\새파일.txt", 'w') or open("C:\\Users\\IT\\PycharmProjects\\새파일.txt", 'w')
 # ex 텍스트 파일에 글 쓰기
-# f = open("새파일.txt",'w')
-# a = int(input("몇번째 줄까지 입력하시겠습니까?"))
-# for i in range(1,a+1):
-#     data = "%s 줄 입니다 \n" % i
-#     f.write(data)
-# f.close()
+f = open("새파일.txt",'a+')
+a = int(input("몇번째 줄까지 입력하시겠습니까?"))
+for i in range(1,a+1):
+    data = "%s 줄 입니다 \n" % i
+    f.write(data)
+# f.write('list1')
+f.close()
 # --------------------------------------------------------------------------------------------------------------------------------------
 # 파일을 읽는 방법
 # 1. readline() 1줄만 읽는다 : line = f.readline()
@@ -253,23 +254,48 @@
 # 클래스의 self는 항상 내부클래스의 인자값으로 들어와야 한다.
 # self는 메소드를 담은 객체로 접근할수있고 self를 사용하지않으면 클래스명으로 접근해야한다.
 
-# 외부 클래스 호출방법 import 파일이름
-import range
+# # # 외부 클래스 호출방법 import 파일이름
+# import range
+# class calc:
+#
+#     def __init__(self, x, y):
+#         self.x = x
+#         self.y = y
+#
+#     def add(self,x,y):
+#         self.result = x + y
+#         return self.result
+#     def mul(self,x,y):
+#         self.result = range.prev.mul(self,x,y)
+#         return self.result
+#
+#
+# c1 = calc(3, 4)
+# print(c1.mul(c1.x,c1.y))
 
+# 모듈이란
+# 일반적으로 외부 클래스 호출방법과 동일하지만 다른 사용자나 개발자가 만들어 놓은 클래스 파일들의 묶음을 임포트해서 그 기능을 사용하는것이다.
 
-class calc:
+# import mod.module
+# p = mod.module.mode
+# print(p.sum(p,1,2))
+# print(p.sum(p,1,2))
+# print(__name__)
+# print(p.showCount(p))
 
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
+# import mod.math
+#
+# a = mod.math.Math
+# b = a.solv(a, a)
+# b = a.solv(a, 1)
+# print("종료")
+# print(b)
 
-    def add(self,x,y):
-        self.result = x + y
-        return self.result
-    def mul(self,x,y):
-        self.result = range.prev.mul(self,x,y)
-        return self.result
-
-
-c1 = calc(3, 4)
-print(c1.mul(c1.x,c1.y))
+# # 위젯 생성방법
+# import tkinter
+# window = tkinter.Tk()
+# window.title('후훗')
+# window.geometry("400x400+400+400")
+# Lbtn = tkinter.Button(window, text = '닫기')
+# Lbtn.pack()
+# window.mainloop()
