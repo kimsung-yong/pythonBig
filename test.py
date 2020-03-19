@@ -193,9 +193,9 @@
 # --------------------------------------------------------------------------------------------------------------------------------------
 # open(r"C:\Users\IT\PycharmProjects\새파일.txt", 'w') or open("C:\\Users\\IT\\PycharmProjects\\새파일.txt", 'w')
 # ex 텍스트 파일에 글 쓰기
-f = open("새파일.txt",'a+')
+f = open("새파일.txt", 'a+')
 a = int(input("몇번째 줄까지 입력하시겠습니까?"))
-for i in range(1,a+1):
+for i in range(1, a + 1):
     data = "%s 줄 입니다 \n" % i
     f.write(data)
 # f.write('list1')
